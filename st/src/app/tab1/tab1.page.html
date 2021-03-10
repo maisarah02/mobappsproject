@@ -1,0 +1,53 @@
+<ion-app>
+  <ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Home
+    </ion-title>
+    <ion-buttons slot="start">
+      <ion-menu-togggle auto hide="false">
+        <ion-menu-button menu="main-menu"></ion-menu-button>
+      </ion-menu-togggle>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" padding class="background">
+
+  <img src="assets/logo.png" width="100%" />
+
+  <ion-card color="dark">
+    <ion-card-header>
+      <ion-card-title>About Us</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      <p>
+        👩🏻‍🍳 Classic Cinnamon Rolls !
+      </p>
+      <p>
+        🏷 Pre-order by batches !
+      </p>
+        ✨ 100% Handmade
+      <p>
+        📍 Selangor & KL only
+      </p>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <video
+    width="100%" controls="controls" preload="metadata" webkit-playsinline="webkit-playsinline" class="videoPlayer">
+    <source src="assets/post.mp4" type="video/mp4"/></video>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-content>
+      <img src="assets/sm.png"/>
+      <center><p>Check out our social media for more information !</p></center>
+      </ion-card-content>
+  </ion-card>
+
+
+</ion-content>
+</ion-app>

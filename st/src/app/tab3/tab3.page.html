@@ -1,0 +1,73 @@
+<ion-app>
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Order
+    </ion-title>
+    <ion-buttons slot="start">
+      <ion-menu-button menu="main-menu"></ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar></ion-header>
+
+<ion-content [fullscreen]="true" padding class="background" >
+
+  <img src="assets/logo.png"/>
+
+  <div class="ion-padding" color="dark">
+ 
+    <ion-item>
+      <ion-label position="floating">Name</ion-label>
+      <ion-input type="text" [(ngModel)]="post.name"></ion-input>
+    </ion-item>
+ 
+    <ion-item>
+      <ion-label position="floating">Address</ion-label>
+      <ion-input type="text" [(ngModel)]="post.address"></ion-input>
+    </ion-item>
+
+      <ion-list >
+        <ion-item>
+          <ion-label>Quantity:</ion-label>
+          <ion-select multiple="true" [(ngModel)]="post.quantity" placeholder="Select">
+            <ion-select-option value="3">3 Pieces</ion-select-option>
+            <ion-select-option value="9">9 Pieces</ion-select-option>
+          </ion-select>
+        </ion-item>
+      </ion-list>
+
+     <ion-list>
+        <ion-radio-group [(ngModel)]="post.delivery">
+          <ion-list-header>
+            <ion-label>Delivery Methods:</ion-label>
+          </ion-list-header>
+          <ion-item>
+            <ion-label>COD</ion-label>
+            <ion-radio slot="start" color="tertiary" value="COD"></ion-radio>
+          </ion-item>
+
+          <ion-item>
+            <ion-label>MrSpeedy</ion-label>
+            <ion-radio slot="start" color="tertiary" value="MrSpeedy"></ion-radio>
+          </ion-item>
+        </ion-radio-group>
+      </ion-list>
+
+    <ion-item>
+          <ion-label>Time: </ion-label>
+          <ion-datetime [(ngModel)]="post.datetime" placeholder="Select (12pm-2pm)" display-format="h:mm P" picker-format="h:mm P" hourValues="12,1,2"></ion-datetime>
+    </ion-item>
+
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+            <div><ion-button (click)="createPost(post)" size="small" color="dark">
+            Place Order
+          </ion-button></div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+ 
+  </div>
+  
+</ion-content>
+</ion-app>

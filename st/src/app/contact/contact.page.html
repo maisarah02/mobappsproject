@@ -1,0 +1,46 @@
+<ion-app>
+  <ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Thank you
+    </ion-title>
+    <ion-buttons slot="start">
+      <ion-menu-togggle auto hide="false">
+        <ion-menu-button menu="main-menu"></ion-menu-button>
+      </ion-menu-togggle>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" padding class="background">
+
+  <img src="assets/logo.png" width="100%" />
+
+  <ion-card color="dark">
+    <ion-card-header>
+      <ion-card-title>👩🏼‍🍳 THANK YOU !</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      <p>
+        Order confirmation will be made after we received your details ! 😉
+      </p>
+      <p>
+        Any inquiries, contact or Whatsapp us at:
+      </p>
+        📱 0169815360
+    </ion-card-content>
+  </ion-card>
+
+  <center><ion-grid>
+      <ion-row>
+        <ion-col>
+            <div><ion-button routerLink =''>
+            Done
+          </ion-button></div>
+        </ion-col>
+      </ion-row>
+    </ion-grid></center>
+
+</ion-content>
+</ion-app>
